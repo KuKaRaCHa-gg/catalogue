@@ -1,0 +1,179 @@
+body {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F0D9B6;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none !important;
+  color: #B59558;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #fda501;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #5A280D;
+  color: white;
+  padding: 5px 10px;
+  z-index: 1;
+}
+
+.header-content {
+  font-size: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #B59558; 
+}
+
+.logo {
+  max-width: 15%;
+  height: auto;
+}
+
+h1 {
+  font-size: 75px;
+  text-align: center; 
+  margin: 0 auto; 
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+#catalogue {
+  background-color: #f0d9b6;
+  padding: 68px;
+  width: 100%;
+  margin-top: 75px;
+}
+
+.product h3 {
+  text-decoration: underline;
+  color: black; 
+  font-size: calc(75px - 10px);
+}
+
+h2 {
+  font-size: 75px;
+  text-align: center; 
+  margin: 0 auto; 
+}
+
+.product-info h3 {
+  font-size: calc(75px - 10px);
+  display: inline-block;
+}
+
+.product-info h4 {
+  font-size: calc(75px - 10px);
+  display: inline-block;
+  margin-left: 150px;
+  margin-right: 20;
+  color: #ECC790;
+}
+
+.product-info p {
+  font-size: calc(43px - 10px);
+  margin-left: 10px;
+  color: #000; 
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+.product-list li {
+  flex: 1 0 21%; 
+  margin: 1%;
+  box-sizing: border-box;
+}
+
+.product-list img {
+  max-width: 94%;
+  height: auto;
+}
+
+.product {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #A17E6A;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  
+}
+
+.product.reverse {
+  flex-direction: row-reverse;
+}
+
+.product img {
+  margin-top: 10px;
+  max-width: 30%;
+  height: auto;
+  object-fit: cover; /* ou contain selon votre préférence */
+}
+
+.product-info {
+  margin-top: 10px;
+  flex-grow: 1; /* Ajouté pour que le texte prenne tout l'espace restant */
+  background-color: #A17E6A;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.product.reverse .product-info {
+  margin-top: 10px;
+  background-color: #AE9283;
+}
+
+@media (max-width: 600px) {
+  .product-list li {
+    flex: 1 0 100%; 
+  }
+
+  .product {
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .product.reverse {
+    flex-direction: column-reverse;
+  }
+
+  .product img {
+    max-width: 25%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .product-info {
+    max-width: 100%;
+  }
+}
